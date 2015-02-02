@@ -1,0 +1,2 @@
+require('frequency')
+require('rspec')
