@@ -14,4 +14,7 @@ describe('String#frequency') do
   it("returns a the correct count if passed a string with multiple matching case entered_word occurences") do
     expect(("chicken orange chicken banana").frequency("chicken")).to(eq(2))
   end
+  it("returns an accurate count even if string has multiple case methods wntered_word occurences") do
+    expect(("ChickEn LICORICE chicken pEtUnIa banana CHICKEN swallow chICKen").word_count("chicken")).to(eq(4))
+  end
 end
