@@ -1,16 +1,14 @@
 class String
-  define_method(:frequency) do |new_string|
-    entered_word = self
-    frequency_count = 1
-    wordy_string = new_string.split(",")
+  define_method(:frequency) do |entered_word|
+    downcase_string = downcase()
+    downcase_word = entered_word.downcase()
+    wordy_string = downcase_string.split(" ")
+    frequency_count = 0
     wordy_string.each() do |word|
-
-      if entered_word == word
-        frequency_count
-
+      if word.==(downcase_word)
+        frequency_count = frequency_count.+(1)
       end
     end
-
-    frequency_count = frequency_count.+(1)
-end
+    frequency_count
+  end
 end
